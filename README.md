@@ -7,8 +7,9 @@ This is a simple project that parses an MT103 message and then writes the same m
 Maven is used to control the build lifecycle.
 To build the project execute the following maven command:
 
+```
      mvn clean install 
-    
+```    
  
 ## Running the application
 
