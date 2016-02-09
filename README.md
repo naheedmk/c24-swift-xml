@@ -1,6 +1,6 @@
 # Swift to XML Transformer
 
-This is a simple Spring Boot project that parses an MT103 message and then writes the same message back to the Console. Firstly in it's original format and then as XML.
+This is a simple project that parses an MT103 message and then writes the same message back to the console. Firstly in it's original format and then as XML.
 
 ## Building the project
 
@@ -9,26 +9,13 @@ To build the project execute the following maven command:
 
      mvn clean install 
     
-## About the Project
-
-Spring Boot is used to boot strap the application. The maven plugin is responsible for packaging the jar and setting the executable main class.
-
-```
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>biz.c24.io.Application</mainClass>
-                </configuration>
-            </plugin>
-```
  
 ## Running the application
 
 To run the application execute the following command:
 
 ```
-	mvn spring-boot:run
+	mvn exec:java
 ```
 
 ## Links

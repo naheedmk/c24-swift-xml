@@ -1,16 +1,13 @@
 package biz.c24.io;
 
-
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import biz.c24.io.api.C24;
 import biz.c24.io.swift2015.*;
 import java.io.*;
 
 /**
  *
- * @author Iain Porter
+ * @author Divan Mostert
  */
-@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {

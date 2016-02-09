@@ -23,13 +23,6 @@
         </developer>
     </developers>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.5.RELEASE</version>
-        <relativePath/>
-    </parent>
-
     <properties>
         <project.build.modelDirectory>${project.basedir}/src/main/c24</project.build.modelDirectory>
         <project.build.generateDirectory>${project.build.directory}/generated-sources</project.build.generateDirectory>
@@ -37,7 +30,6 @@
         <c24.io.api.version>4.7.9</c24.io.api.version>
         <c24.io.studio.version>4.7.7</c24.io.studio.version>
         <c24.io.maven.version>4.7.1</c24.io.maven.version>
-        <c24.io.spring.version>3.0.7</c24.io.spring.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
@@ -57,10 +49,8 @@
                     <artifactId>servlet-api</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        
-        <!-- C24 generated Swift -->
-        
+        </dependency>        
+               
         <dependency>
 	    	<artifactId>swift2015</artifactId>
     		<groupId>biz.c24.io.swift</groupId>
@@ -69,59 +59,12 @@
     		<systemPath>${basedir}/src/main/resources/biz.c24.io.swift2015.jar</systemPath>
 		</dependency>
 
-        <!-- C24 Spring -->
-        <dependency>
-            <groupId>biz.c24.io.spring</groupId>
-            <artifactId>c24-spring-core</artifactId>
-            <version>${c24.io.spring.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-web</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>biz.c24.io.spring</groupId>
-            <artifactId>c24-spring-integration</artifactId>
-            <version>${c24.io.spring.version}</version>
-        </dependency>
-
-        <!-- Spring -->
-        <dependency>
-            <groupId>org.springframework.integration</groupId>
-            <artifactId>spring-integration-file</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.integration</groupId>
-            <artifactId>spring-integration-xml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-integration</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.integration</groupId>
-            <artifactId>spring-integration-java-dsl</artifactId>
-            <version>1.0.2.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
     <repositories>
         <repository>
             <id>c24-nexus</id>
             <name>C24 Nexus</name>
             <url>http://repo.c24io.net:8081/nexus/content/groups/public</url>
-        </repository>
-        <repository>
-            <id>spring-releases</id>
-            <name>Spring Maven RELEASE Repository</name>
-            <url>http://repo.spring.io/release</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -134,12 +77,22 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>biz.c24.io.Application</mainClass>
-                </configuration>
-            </plugin>
+        		<groupId>org.codehaus.mojo</groupId>
+        		<artifactId>exec-maven-plugin</artifactId>
+        		<version>1.4.0</version>
+		        <executions>
+        			<execution>
+						<goals>
+				  			<goal>java</goal>
+						</goals>
+			  		</execution>
+				</executions>
+				<configuration>
+			  		<mainClass>biz.c24.io.Application</mainClass>
+			  		<!-- C24 generated Swift --> 
+			  		<additionalClasspathElements>${basedir}/src/main/resources/biz.c24.io.swift2015.jar</additionalClasspathElements>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
 </project>
