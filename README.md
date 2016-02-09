@@ -1,6 +1,6 @@
 # Swift to XML Transformer
 
-This is a simple Spring Boot project that parses an MT103 message and then writes the same message back to the Console. Firstly init's original format and then as XML.
+This is a simple Spring Boot project that parses an MT103 message and then writes the same message back to the Console. Firstly in it's original format and then as XML.
 
 ## Building the project
 
