@@ -1,4 +1,4 @@
-# Swift to XML Transformer
+# Swift MT103 to XML Converter
 
 This is a simple project that parses an MT103 message and then writes the same message back to the console. Firstly in it's original format and then as XML.
 
@@ -23,4 +23,4 @@ To run the application execute the following command:
 
 * [C24 IO] (http://c24tech.com)
 * [C24 Git Hub Repository] (https://github.com/C24-Technologies)
-* [Spring Boot Reference Guide] (http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+* [C24 SWIFT MT103 to SWIFT MX pacs.008.001.01 Transform Example] (https://github.com/C24-Technologies/c24-swift-to-mx-transform)
