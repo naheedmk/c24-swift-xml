@@ -1,6 +1,6 @@
 # Swift MT103 to XML Converter
 
-This is a simple project that parses an MT103 message and then writes the same message back to the console. Firstly in it's original format and then as XML.
+This is a simple project that parses an MT103 message and then writes the same message back to the console. Firstly in it's original format and then as XML and JSON too for good measure.
 
 ## Building the project
 

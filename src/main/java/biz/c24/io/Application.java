@@ -21,6 +21,11 @@ public class Application {
 			//Write out the Swift message as XML
 			System.out.println("The original message represented as XML:");
 			C24.write(parsedMessage).as(C24.Format.XML).to(System.out);
+			System.out.println("");
+			
+			//Write out the Swift message as JSON
+			System.out.println("The original message represented as JSON:");
+			C24.write(parsedMessage).as(C24.Format.JSON).to(System.out);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
