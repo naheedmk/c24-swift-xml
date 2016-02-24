@@ -90,7 +90,9 @@
 				<configuration>
 			  		<mainClass>biz.c24.io.Application</mainClass>
 			  		<!-- C24 generated Swift --> 
-			  		<additionalClasspathElements>${basedir}/src/main/resources/biz.c24.io.swift2015.jar</additionalClasspathElements>
+			  		<additionalClasspathElements>
+                        <additionalClasspathElement>${basedir}/src/main/resources/biz.c24.io.swift2015.jar</additionalClasspathElement>
+                    </additionalClasspathElements>
 				</configuration>
 			</plugin>
         </plugins>
