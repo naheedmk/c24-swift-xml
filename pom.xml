@@ -27,7 +27,7 @@
         <project.build.modelDirectory>${project.basedir}/src/main/c24</project.build.modelDirectory>
         <project.build.generateDirectory>${project.build.directory}/generated-sources</project.build.generateDirectory>
 
-        <c24.io.api.version>4.7.18</c24.io.api.version>
+        <c24.io.api.version>4.8.0</c24.io.api.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
     </properties>
