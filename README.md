@@ -1,25 +1,23 @@
-# Swift MT103 to XML Converter
+C24 Swift Open Edition
 
-This is a simple project that parses an MT103 message and then writes the same message back to the console. Firstly in it's original format and then as XML and JSON too for good measure.
-
-## Building the project
+This is the C24 Swift Open Edition supplied as a maven project.
+The SWIFT jar is located in src/main/resources
+It contains all of the SWIFT 2015 java libraries.
+The only difference between this version and the enterprise edition is the exclusion of the SWIFT validation rules.
+ 
+Building the project:
 
 Maven is used to control the build lifecycle.
-To build the project execute the following maven command:
+To build the project execute the following maven command: mvn clean install 
+   
+The only required dependency is on the C24-io-api Runtime library.
+To see examples of using this to parse and transform SWIFT messages see the sample java class in src/main/java
 
-```
-     mvn clean install 
-```    
- 
-## Running the application
+Running the project:
 
-To run the application execute the following command:
+To run the project execute the following maven command: mvn exec:java
 
-```
-	mvn exec:java
-```
-
-## Links
+Links
 
 * [C24 IO] (http://c24tech.com)
 * [C24 Git Hub Repository] (https://github.com/C24-Technologies)
