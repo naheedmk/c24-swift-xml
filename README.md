@@ -2,7 +2,7 @@ C24 Swift Open Edition
 
 This is the C24 Swift Open Edition supplied as a maven project.
 The SWIFT jar is located in src/main/resources
-It contains all of the SWIFT 2015 java libraries.
+It contains all of the SWIFT 2016 java libraries.
 The only difference between this version and the enterprise edition is the exclusion of the SWIFT validation rules.
  
 Building the project:
